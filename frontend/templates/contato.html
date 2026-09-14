@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Contato · {{ app_name }}{% endblock %}
+{% block description %}Fale com a Vetor Zero: solicite uma avaliação ofensiva do seu ambiente OT/SCADA ou tire dúvidas sobre conformidade e treinamento.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-kicker">// contato</p>
+    <h1>Fale com um especialista</h1>
+    <p>Conte o cenário que te preocupa. Respondemos em até 1 dia útil, e toda conversa começa sob confidencialidade.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-inner">
+
+    <div class="contact-info reveal">
+      <h2>O que acontece depois do envio</h2>
+      <ol class="steps-list">
+        <li><span>1</span><div><strong>Triagem (1 dia útil)</strong><p>Um especialista revisa sua mensagem e marca uma conversa de 30 minutos.</p></div></li>
+        <li><span>2</span><div><strong>Diagnóstico inicial</strong><p>Entendemos o ambiente, os riscos prioritários e as restrições de operação.</p></div></li>
+        <li><span>3</span><div><strong>Proposta de engagement</strong><p>Escopo, janelas, regras de aborto e investimento: tudo por escrito antes de qualquer teste.</p></div></li>
+      </ol>
+
+      <div class="contact-channels">
+        <h3>Outros canais</h3>
+        <ul>
+          <li><strong>E-mail:</strong> <a href="mailto:contato@vetor0.example">contato@vetor0.example</a></li>
+          <li><strong>Telefone:</strong> <a href="tel:+551190000000">+55 (11) 90000-0000</a></li>
+          <li><strong>Emergência (incidente em andamento):</strong> socorro@vetor0.example</li>
+        </ul>
+        <p class="contact-note">
+          Se você está sofrendo um incidente agora, indique <code>IR-URGENTE</code> no assunto.
+          Priorizamos resposta em poucas horas.
+        </p>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="form-contato" novalidate>
+      <h2>Solicitar contato</h2>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" required minlength="2" placeholder="Seu nome completo">
+          <span class="field-error" data-error-for="nome"></span>
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail corporativo *</label>
+          <input type="email" id="email" name="email" required placeholder="voce@empresa.com.br">
+          <span class="field-error" data-error-for="email"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nome da organização">
+        </div>
+        <div class="form-field">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="assunto">Serviço de interesse *</label>
+        <select id="assunto" name="assunto" required>
+          <option value="" selected disabled>Selecione…</option>
+          <option value="pentest">Pentest OT/SCADA</option>
+          <option value="red-team">Red Team Industrial</option>
+          <option value="conformidade">Conformidade & Arquitetura</option>
+          <option value="treinamento">Treinamento & War Games</option>
+          <option value="outro">Outro / não sei ainda</option>
+        </select>
+        <span class="field-error" data-error-for="assunto"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required minlength="10"
+          placeholder="Descreva o ambiente (setor, porte, principais preocupações) e o que você espera de um engagement."></textarea>
+        <span class="field-error" data-error-for="mensagem"></span>
+      </div>
+
+      <div class="form-field form-consent">
+        <label class="checkbox">
+          <input type="checkbox" id="consentimento" name="consentimento" required>
+          <span>Autorizo o uso dos meus dados exclusivamente para retorno deste contato, conforme a LGPD. *</span>
+        </label>
+        <span class="field-error" data-error-for="consentimento"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-enviar">Enviar mensagem</button>
+
+      <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+    </form>
+
+  </div>
+</section>
+
+{% endblock %}

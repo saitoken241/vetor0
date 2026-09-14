@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Dependências / build
+node_modules/
+dist/
+build/
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Dados sensíveis (leads captados pelo formulário)
+data/leads.json
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Testes / caches
+.pytest_cache/
+.coverage
+htmlcov/

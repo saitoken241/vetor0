@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}404 · {{ app_name }}{% endblock %}
+
+{% block content %}
+<section class="section error-page">
+  <div class="container error-inner">
+    <p class="error-code">// 404</p>
+    <h1>Recurso fora do escopo</h1>
+    <p>Esta página não existe, e se existisse estaria fora da allowlist.</p>
+    <a href="/" class="btn btn-primary">Voltar ao início</a>
+  </div>
+</section>
+{% endblock %}

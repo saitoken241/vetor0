@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}Serviços · {{ app_name }}{% endblock %}
+{% block description %}Pentest de redes OT/SCADA, red team industrial, avaliação de conformidade IEC 62443 e treinamento hands-on para times de automação e segurança.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-kicker">// portfólio de serviços</p>
+    <h1>Evidências, não suposições</h1>
+    <p>Cada serviço entrega vulnerabilidades exploradas com prova, risco priorizado pelo impacto na operação e plano de correção acionável.</p>
+  </div>
+</section>
+
+<!-- ============ PENTEST ============ -->
+<section class="section service-block" id="pentest">
+  <div class="container service-inner">
+    <div class="service-copy reveal">
+      <p class="section-kicker">01 · avaliação ofensiva</p>
+      <h2>Pentest de Redes OT/SCADA</h2>
+      <p>
+        Avaliação ofensiva controlada da rede industrial, conduzida por quem entende as diferenças entre um
+        exploit que gera log e um exploit que trava um PLC. Cobre da fronteira IT/OT até o nível de campo
+        do modelo Purdue.
+      </p>
+      <h3>O que está incluso</h3>
+      <ul class="check-list">
+        <li>Reconhecimento passivo (sem pacotes invasivos) e inventário de ativos OT</li>
+        <li>Enumeração e fuzzing seguro de protocolos: Modbus, DNP3, IEC 104/61850, S7comm, OPC UA</li>
+        <li>Teste de PLCs, HMIs, estações de engenharia, historiadores e servidores de licença</li>
+        <li>Validação de segmentação, zonas e condutos; testes de cross-IT/OT</li>
+        <li>Análise de controle de acesso, senhas default e serviços de manutenção remota</li>
+      </ul>
+      <div class="service-meta">
+        <span>Duração típica: 3–6 semanas</span>
+        <span>Entregáveis: relatório técnico + executivo + sessão de devolutiva</span>
+      </div>
+    </div>
+    <aside class="service-panel reveal">
+      <h3>Cadeia de ataque típica encontrada</h3>
+      <ol class="attack-chain">
+        <li>Phishing alcança um técnico de manutenção</li>
+        <li>Estação de engenharia comprometida (sem EDR homologado)</li>
+        <li>Descoberta da rede OT via ARP/ broadcasts industriais</li>
+        <li>PLC sem autenticação: lógica lida e alterada</li>
+        <li>Setpoint do processo manipulado em produção</li>
+      </ol>
+      <p class="panel-note">Cada etapa é testada isoladamente, com reversão imediata.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ RED TEAM ============ -->
+<section class="section section-alt service-block" id="red-team">
+  <div class="container service-inner">
+    <div class="service-copy reveal">
+      <p class="section-kicker">02 · simulação de adversário</p>
+      <h2>Red Team Industrial</h2>
+      <p>
+        Um adversário persistente simulado por semanas, digital e, quando contratado, físico.
+        O objetivo não é achar falhas isoladas: é medir se o SOC, os playbooks e as pessoas
+        conseguem detectar e responder antes do impacto.
+      </p>
+      <h3>O que está incluso</h3>
+      <ul class="check-list">
+        <li>Campanhas de spear phishing direcionadas a engenharia e manutenção</li>
+        <li>Persistência na rede corporativa e pivotagem até a rede industrial</li>
+        <li>Simulação de cenários reais: ransomware industrial, sabotagem de lógica, exfiltração de receitas</li>
+        <li>Teste físico (opcional): acessos, tailgating, dispositivos plantados em áreas técnicas</li>
+        <li>Debriefing com o time de defesa e recomendações de detecção (regras Sigma para OT)</li>
+      </ul>
+      <div class="service-meta">
+        <span>Duração típica: 6–12 semanas</span>
+        <span>Entregáveis: relatório de campanha + métricas de detecção + tabletop</span>
+      </div>
+    </div>
+    <aside class="service-panel reveal">
+      <h3>Regras do jogo</h3>
+      <ul class="check-list">
+        <li>Scope agreement assinado pela diretoria antes do início</li>
+        <li>Somente cenários reversíveis, nada destrutivo em produção</li>
+        <li>Cenários de sabotagem executados em gêmeo digital / laboratório</li>
+        <li>Abort imediato a qualquer momento por qualquer parte</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ CONFORMIDADE ============ -->
+<section class="section service-block" id="conformidade">
+  <div class="container service-inner">
+    <div class="service-copy reveal">
+      <p class="section-kicker">03 · governança e arquitetura</p>
+      <h2>Avaliação de Conformidade & Arquitetura</h2>
+      <p>
+        Benchmarking formal do programa de segurança OT contra padrões internacionais, com
+        roadmap priorizado pelo risco operacional, não por checklist. Indicado antes de grandes
+        investimentos em tecnologia ou para atender clientes e reguladores.
+      </p>
+      <h3>O que está incluso</h3>
+      <ul class="check-list">
+        <li>Gap analysis contra ISA/IEC 62443 (níveis de segurança alvo por zona)</li>
+        <li>Avaliação de referências: NIST SP 800-82, MITRE ATT&CK for ICS, guias setoriais</li>
+        <li>Revisão de arquitetura: segmentação Purdue, DMZ industrial, zonas e condutos</li>
+        <li>Governança: políticas, gestão de riscos, gestão de patch e acesso remoto de fornecedores</li>
+        <li>Roadmap em ondas (quick wins → médio prazo → transformação) com estimativa de esforço</li>
+      </ul>
+      <div class="service-meta">
+        <span>Duração típica: 2–4 semanas</span>
+        <span>Entregáveis: matriz de gaps + roadmap + revisão de arquitetura</span>
+      </div>
+    </div>
+    <aside class="service-panel reveal">
+      <h3>Maturidade por domínio</h3>
+      <div class="meter-row"><span>Inventário & monitoramento</span><div class="meter"><span style="--w:25%"></span></div><em>25%</em></div>
+      <div class="meter-row"><span>Segmentação de rede</span><div class="meter"><span style="--w:40%"></span></div><em>40%</em></div>
+      <div class="meter-row"><span>Gestão de vulnerabilidades</span><div class="meter"><span style="--w:20%"></span></div><em>20%</em></div>
+      <div class="meter-row"><span>Resposta a incidentes OT</span><div class="meter"><span style="--w:15%"></span></div><em>15%</em></div>
+      <p class="panel-note">Exemplo de saída. O gráfico real é gerado por engagement.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ TREINAMENTO ============ -->
+<section class="section section-alt service-block" id="treinamento">
+  <div class="container service-inner">
+    <div class="service-copy reveal">
+      <p class="section-kicker">04 · pessoas</p>
+      <h2>Treinamento & War Games</h2>
+      <p>
+        Nenhum controle sobrevive a um operador apressado ou a um técnico com pendrive.
+        Formamos times de automação, TI e segurança para reconhecer, conter e responder.
+        O treino acontece em laboratório, nunca em produção.
+      </p>
+      <h3>Formatos</h3>
+      <ul class="check-list">
+        <li>Oficina hands-on: ataques a PLCs/HMIs em laboratório (OpenPLC, ScadaBR, snap7)</li>
+        <li>War game blue vs. red team com cenário cronometrado e pontuação</li>
+        <li>Tabletop exercise: ransomware industrial na planta, decisões em tempo real</li>
+        <li>Trilha para desenvolvedores de lógica: hardening de PLC e boas práticas de programação</li>
+        <li>Trilha para SOC: como detectar tráfego malicioso em protocolos industriais</li>
+      </ul>
+      <div class="service-meta">
+        <span>Formatos: 1–3 dias, presencial ou remoto</span>
+        <span>Entregáveis: apostila + ambiente de laboratório reutilizável</span>
+      </div>
+    </div>
+    <aside class="service-panel reveal">
+      <h3>Laboratório incluso</h3>
+      <ul class="check-list">
+        <li>OpenPLC + HMI virtual para ataques controlados</li>
+        <li>Snap7 / pycomm3 para exercícios de escrita de memória</li>
+        <li>Capturas Wireshark com tráfego industrial real de referência</li>
+        <li>Máquinas vulneráveis replicando CVEs históricos de ICS</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta">
+  <div class="container cta-inner reveal">
+    <h2>Pronto para ver sua rede como um atacante vê?</h2>
+    <p>Conte o cenário que te preocupa. Montamos o engagement sob medida.</p>
+    <a href="/contato" class="btn btn-primary btn-lg">Falar com um especialista</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% block description %}Vetor Zero: consultoria de segurança ofensiva para ambientes OT/SCADA. Pentest industrial, red team e conformidade IEC 62443.{% endblock %}">
+  <title>{% block title %}{{ app_name }} · {{ app_tagline }}{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css?v=6">
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="{{ app_name }}, página inicial">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 3 56 17v30L32 61 8 47V17L32 3z" fill="none" stroke="currentColor" stroke-width="4"/>
+          <ellipse cx="32" cy="32" rx="12" ry="15" fill="none" stroke="currentColor" stroke-width="4.5"/>
+          <line x1="41" y1="19" x2="23" y2="45" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <span class="logo-text">VETOR<span class="logo-accent">0</span><span class="logo-cursor">_</span></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/" class="{% if active_page == 'home' %}is-active{% endif %}">Início</a></li>
+          <li><a href="/servicos" class="{% if active_page == 'servicos' %}is-active{% endif %}">Serviços</a></li>
+          <li><a href="/sobre" class="{% if active_page == 'sobre' %}is-active{% endif %}">Quem somos</a></li>
+          <li><a href="/contato" class="{% if active_page == 'contato' %}is-active{% endif %}">Contato</a></li>
+        </ul>
+        <a href="/contato" class="btn btn-primary btn-sm nav-cta">Solicitar avaliação</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-footer" aria-label="{{ app_name }}">
+          <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 3 56 17v30L32 61 8 47V17L32 3z" fill="none" stroke="currentColor" stroke-width="4"/>
+            <ellipse cx="32" cy="32" rx="12" ry="15" fill="none" stroke="currentColor" stroke-width="4.5"/>
+            <line x1="41" y1="19" x2="23" y2="45" stroke="currentColor" stroke-width="4"/>
+          </svg>
+          <span class="logo-text">VETOR<span class="logo-accent">0</span></span>
+        </a>
+        <p>A Vetor Zero encontra as brechas dos ambientes industriais antes que um adversário real o faça, com autorização, método e zero impacto à produção.</p>
+        <p class="footer-note">Projeto acadêmico. Não representa uma empresa real.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/servicos">Serviços</a></li>
+          <li><a href="/sobre">Quem somos</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serviços</h3>
+        <ul>
+          <li><a href="/servicos#pentest">Pentest OT/SCADA</a></li>
+          <li><a href="/servicos#red-team">Red Team Industrial</a></li>
+          <li><a href="/servicos#conformidade">Conformidade IEC 62443</a></li>
+          <li><a href="/servicos#treinamento">Treinamento & War Games</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="mailto:contato@vetor0.example">contato@vetor0.example</a></li>
+          <li><a href="tel:+551190000000">+55 (11) 90000-0000</a></li>
+          <li>São Paulo, SP, Brasil</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="ano">2026</span> {{ app_name }}. Todos os direitos reservados.</p>
+        <p class="footer-standards">Alinhado a ISA/IEC 62443 · NIST SP 800-82 · MITRE ATT&CK for ICS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js?v=6" defer></script>
+</body>
+</html>

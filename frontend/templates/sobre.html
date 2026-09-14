@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Quem somos · {{ app_name }}{% endblock %}
+{% block description %}Conheça a equipe da Vetor Zero: engenheiros de automação e ofensores de segurança apaixonados por quebrar (e proteger) sistemas industriais.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-kicker">// quem somos</p>
+    <h1>Engenharia de automação + segurança ofensiva</h1>
+    <p>Nascemos da constatação simples: quem defende redes industriais precisa entender processos industriais, e quem testa defesas precisa pensar como atacante.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-inner">
+    <div class="split-copy reveal">
+      <h2>Nossa missão</h2>
+      <p>
+        O Brasil opera milhares de plantas industriais conectadas que cresceram em segurança muito mais devagar
+        do que cresceram em conectividade. Nosso trabalho é expor essa lacuna <em>de forma controlada</em>,
+        antes que um grupo criminoso, um Estado ou um insider a exponha de forma catastrófica.
+      </p>
+      <p>
+        Não vendemos caixa preta. Vendemos evidência, método e capacitação: cada engagement termina com o
+        cliente sabendo exatamente o que é vulnerável, por que importa e o que fazer primeiro.
+      </p>
+    </div>
+    <div class="split-copy reveal">
+      <h2>Nossos princípios</h2>
+      <ul class="check-list">
+        <li><strong>Operação primeiro:</strong> nenhuma descoberta técnica justifica parar uma planta sem autorização</li>
+        <li><strong>Ética inegociável:</strong> autorização formal, escopo fechado, confidencialidade absoluta</li>
+        <li><strong>Evidência acima de opinião:</strong> todo risco reportado foi demonstrado ou está claramente sinalizado como análise</li>
+        <li><strong>Conhecimento compartilhado:</strong> o cliente sai do engagement mais capaz do que entrou</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="equipe">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-kicker">// equipe</p>
+      <h2>Quem quebra (e conserta) as redes</h2>
+    </header>
+
+    <div class="team-grid">
+      <article class="team-card reveal">
+        <div class="team-avatar" aria-hidden="true">AL</div>
+        <h3>Ana Luiza Rocha</h3>
+        <p class="team-role">Fundadora · Líder de Red Team</p>
+        <p>Engenheira de controle e automação, ofensora ICS. Já simulou ataques a usinas, subestações e plataformas offshore em ambientes controlados.</p>
+        <div class="team-tags"><span>ATT&amp;CK for ICS</span><span>S7comm</span><span>Gemeo digital</span></div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-avatar" aria-hidden="true">RC</div>
+        <h3>Rafael Costa</h3>
+        <p class="team-role">Pentester Sênior OT</p>
+        <p>Especialista em protocolos industriais e fuzzing seguro. Autor de ferramentas internas de reconhecimento passivo para redes Modbus e DNP3.</p>
+        <div class="team-tags"><span>Modbus</span><span>DNP3</span><span>Fuzzing</span></div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-avatar" aria-hidden="true">JM</div>
+        <h3>Juliana Martins</h3>
+        <p class="team-role">Consultora de Conformidade</p>
+        <p>Implementa ISA/IEC 62443 em plantas com restrição de parada. Traduz gaps técnicos para linguagem de diretoria e roadmap de investimento.</p>
+        <div class="team-tags"><span>IEC 62443</span><span>NIST 800-82</span><span>SGSI</span></div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-avatar" aria-hidden="true">PF</div>
+        <h3>Pedro Farias</h3>
+        <p class="team-role">Engenheiro de Detecção</p>
+        <p>Constrói sensores e regras de detecção para protocolos que nenhuma ferramenta comercial entende. Ex-SOC de infraestrutura crítica.</p>
+        <div class="team-tags"><span>Sigma OT</span><span>NDR</span><span>Threat hunting</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-kicker">// referências</p>
+      <h2>Baseado em padrões, não em achismo</h2>
+    </header>
+    <div class="standards-grid">
+      <div class="standard reveal"><span class="standard-acronym">IEC 62443</span><p>Série internacional de segurança para sistemas de automação e controle industrial.</p></div>
+      <div class="standard reveal"><span class="standard-acronym">NIST 800-82</span><p>Guia do NIST para segurança OT, do inventário à resposta a incidentes.</p></div>
+      <div class="standard reveal"><span class="standard-acronym">ATT&amp;CK ICS</span><p>Base de conhecimento MITRE com táticas e técnicas usadas contra ambientes industriais.</p></div>
+      <div class="standard reveal"><span class="standard-acronym">MITRE CWE/CVE</span><p>Rastreabilidade de fragilidades e vulnerabilidades em cada achado reportado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="container cta-inner reveal">
+    <h2>Quer trocar uma ideia sobre o seu ambiente?</h2>
+    <p>Conversa inicial de 30 minutos, sem compromisso.</p>
+    <a href="/contato" class="btn btn-primary btn-lg">Falar com a equipe</a>
+  </div>
+</section>
+
+{% endblock %}
